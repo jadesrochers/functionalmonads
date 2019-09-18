@@ -3,23 +3,22 @@
     "version": "0.1.0",
     "license": "Apache-2.0",
     "author": "Jared Desrochers",
-    "repository": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jadesrochers/functionalmonads.git"
+    },
     "description": "Use Monads in a functional programming style",
     "main": "index.js",
     "keywords": [],
     "dependencies": {
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.15",
         "monet": "^0.9.0",
         "ramda": "^0.26.1"
-    },
-    "repository":{
-        "type":"git",
-	"url": "https://github.com/jadesrochers/functionalmonads.git"
     },
     "scripts": {
         "test": "jest"
     },
     "devDependencies": {
-        "jest": "^24.5.0"
+        "jest": "^24.9.0"
     }
 }
