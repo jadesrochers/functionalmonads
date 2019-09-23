@@ -6,7 +6,6 @@ beforeEach(() => {
   testfn1 = jest.fn(n => n+1)
   testfn2 = jest.fn(n => n+2)
   testfn3 = jest.fn(n => n+3)
-  testprom3 = jest.fn(n => Promise.resolve(n-3))
 })
 
 test('pipeReader test', () => {

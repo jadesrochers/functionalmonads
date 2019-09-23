@@ -64,14 +64,14 @@ test('pipeMayFalsy test', () => {
      retfalse,
      testfn3,
   )(3)
-  var maytest2 = fm.pipeMayFalsy(
+  var maytest3 = fm.pipeMayFalsy(
      testfn1,
      retblank,
      testfn3,
   )(3)
   expect(maytest.isSome()).toEqual(false)
   expect(maytest2.isSome()).toEqual(false)
-  expect(maytest2.isSome()).toEqual(false)
+  expect(maytest3.isSome()).toEqual(false)
 
 })
 
