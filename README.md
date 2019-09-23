@@ -165,7 +165,6 @@ Makes use of Reader.ask.
 **Define function that needs the injected value (second arg)**  
 ```javascript
 let testAsk1 = a => b => a + b
-let testPromAsk1 = a => b => Promise.resolve(a + b)
 ```
 **When calling them, use fm.chainAsk to inject the value**  
 fm.chainAsk(n => testAsk1(n)),
@@ -187,7 +186,7 @@ var asktest2 = fm.pipeAsk(
 )(0)
 // )(M.Reader.of(0))
 asktest2.run(1)
-// 1 gets passed to testAsk1 in both locations
+// passes value 1 to testAsk1 in both locations
 // 4 
 ```
 
@@ -195,7 +194,6 @@ asktest2.run(1)
 Same as above, but suppoers async functions
 ```javascript
 let testPromAsk1 = a => b => Promise.resolve(a + b)
-let testprom1 = n => Promise.resolve(n+1)
 ```
 **Has its own helper to pass the value -**  
 fm.chainPromAsk(n => testPromAsk1(n)),
